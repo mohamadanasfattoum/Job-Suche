@@ -22,7 +22,7 @@ experiences = (
 class Jobs(models.Model):
     name = models.CharField(max_length=100)
     subtitle = models.TextField(max_length=500)
-    description = models.TextField(max_length=5000)
+    description = models.TextField(max_length=50000)
     jobs_type = models.CharField(max_length=30,choices=category_type)
     experience = models.IntegerField(choices=experiences)
     date = models.DateTimeField(default=timezone.now)
