@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import Jobs, Company, Category
 
-# Create your views here.
+class JobList(generic.ListView):
+    model = Jobs
+
