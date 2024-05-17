@@ -5,3 +5,7 @@ from .models import Jobs, Company, Category
 class JobList(generic.ListView):
     model = Jobs
 
+
+
+class JobDetail(generic.DetailView):
+    model = Jobs

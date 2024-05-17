@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.text import slugify
 
 category_type = (
     ('FullTime','Full Time'),
@@ -30,10 +31,15 @@ class Jobs(models.Model):
     category = models.ForeignKey('Category', related_name='jobs_Category', on_delete=models.CASCADE, null=True, blank=True)
     company = models.ForeignKey('Company', related_name='jobs_company', on_delete=models.CASCADE, null=True, blank=True)
     logo = models.ImageField(upload_to ='Jobs_logo', null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
 
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Jobs, self).save(*args, **kwargs)
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
