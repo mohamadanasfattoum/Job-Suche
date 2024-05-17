@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils import timezone
 from django.utils.text import slugify
 
@@ -20,6 +21,7 @@ experiences = (
 
 
 class Jobs(models.Model):
+    user = models.ForeignKey(User, related_name='jobs_user', on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=100)
     subtitle = models.TextField(max_length=500)
     description = models.TextField(max_length=50000)

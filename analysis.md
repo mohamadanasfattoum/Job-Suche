@@ -23,3 +23,7 @@ Company :
     email
     web
     Location
+
+
+API:
+list, detail, add, update, deleta
