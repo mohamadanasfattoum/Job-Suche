@@ -1,28 +1,28 @@
 Jobs:
-    name
-    subtitle
-    Experience
-    Required Knowledge,
-    Job Description
-    Posted date :
-    Location :
-    Vacancy :
-    Job nature :Full time
-    Salary : $7,800 yearly
+    - name
+    - subtitle
+    - Experience
+    - Required Knowledge,
+    - Job Description
+    - Posted date :
+    - Location :
+    - Vacancy :
+    - Job nature :Full time
+    - Salary : $7,800 yearly
 
 
 Category:
-    name:
-    logo
+    - name:
+    - logo
 
 
 Company :
-    name
-    subtitle
-    logo
-    email
-    web
-    Location
+    - name
+    - subtitle
+    - logo
+    - email
+    - web
+    - Location
 
 
 API:
