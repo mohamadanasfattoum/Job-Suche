@@ -27,3 +27,24 @@ Company :
 
 API:
 list, detail, add, update, deleta
+
+
+
+----------------------
+
+Posts:
+    - user
+    - name
+    - post
+    - subtitle
+    - date
+    - comments
+    - slug
+    - image
+    - tags
+
+comments:
+    - user
+    - date
+    - comment
+    - post
