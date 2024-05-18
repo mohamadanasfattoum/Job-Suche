@@ -9,15 +9,23 @@ class PostList(generic.ListView):
 
 
 class PostDetail(generic.DetailView):
-    model=Post
+    model = Post
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        post = self.get_object()
+        comment = post.comment_post.all()
+        context['comments'] = comment
+        return context
 
-class PostDetail(generic.CreateView):
-    model=Post
 
 
-class PostDetail(generic.DeleteView):
-    model=Post
+# class PostDetail(generic.CreateView):
+#     model=Post
 
 
-class PostDetail(generic.UpdateView):
-    model=Post
+# class PostDetail(generic.DeleteView):
+#     model=Post
+
+
+# class PostDetail(generic.UpdateView):
+#     model=Post

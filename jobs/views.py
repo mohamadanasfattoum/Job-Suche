@@ -4,7 +4,11 @@ from .models import Jobs, Company, Category
 
 class JobList(generic.ListView):
     model = Jobs
-
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['jobs_type'] = Jobs.jobs_type
+    #     context['experiences'] = Jobs.experience
+    #     return context
 
 
 class JobDetail(generic.DetailView):
