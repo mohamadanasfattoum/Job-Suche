@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     # my app
     'jobs',
+    'blog',
 ]
 
 MIDDLEWARE = [
