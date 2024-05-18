@@ -26,7 +26,7 @@
                 <div class="row">
                     <!-- Left content -->
                     <div class="col-xl-3 col-lg-3 col-md-4">
-                        <div class="row">
+                        {% comment %} <div class="row">
                             <div class="col-12">
                                     <div class="small-section-tittle2 mb-45">
                                     <div class="ion"> <svg 
@@ -102,7 +102,7 @@
 
                             
                         </div>
-                        <!-- Job Category Listing End -->
+                        <!-- Job Category Listing End --> {% endcomment %}
                     </div>
                     <!-- Right content -->
                     <div class="col-xl-9 col-lg-9 col-md-8">
@@ -113,7 +113,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="count-job mb-35">
-                                            <span>39, 782 Jobs found</span>
+                                            <span>{{object_list.count}} Jobs found</span>
                                         </div>
                                     </div>
                                 </div>
