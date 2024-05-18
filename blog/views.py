@@ -18,14 +18,16 @@ class PostDetail(generic.DetailView):
         return context
 
 
+class CreatePost(generic.CreateView):
+    model=Post
+    fields = '__all__'
+    template_name = 'blog/post_form.html'
 
-# class PostDetail(generic.CreateView):
-#     model=Post
+class DeletePost(generic.DeleteView):
+    model=Post
 
 
-# class PostDetail(generic.DeleteView):
-#     model=Post
-
-
-# class PostDetail(generic.UpdateView):
-#     model=Post
+class UpdatePost(generic.UpdateView):
+    model=Post
+    fields = '__all__'
+    template_name = 'blog/edit_post.html'
